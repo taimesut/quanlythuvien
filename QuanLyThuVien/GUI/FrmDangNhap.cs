@@ -45,7 +45,7 @@ namespace QuanLyThuVien.GUI
             }
 
             // Đăng nhập thành công
-            MessageBox.Show($"Chào mừng {user.TenTaiKhoan}!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show($"Chào mừng {user.TenTaiKhoan}!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Ẩn form đăng nhập
             this.Hide();

@@ -54,3 +54,4 @@ C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\bin\Debug\System.Runtime.Co
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyTh.B5137F7B.Up2Date
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\LibraryDashboard.FrmDashBoard.resources
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.FrmTheLoai.resources

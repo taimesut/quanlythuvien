@@ -15,6 +15,7 @@ namespace QuanLyThuVien.GUI
         {
             InitializeComponent();
             this.Text = "Thêm Thể Loại Mới";
+            this.dataGridView1.DataSource = bus.GetAll();
         }
 
         // Constructor sửa (truyền DTO vào)
@@ -60,15 +61,6 @@ namespace QuanLyThuVien.GUI
                     MessageBox.Show("Cập nhật thể loại thất bại.");
                 }
             }
-
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
         }
     }
 }
