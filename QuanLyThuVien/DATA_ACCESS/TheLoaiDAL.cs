@@ -46,7 +46,7 @@ namespace QuanLyThuVien.DATA_ACCESS
         {
             using (MySqlConnection conn = db.GetConnection())
             {
-                string query = "INSERT INTO TheLoai (TenTheLoai, MoTa) VALUES (@TenTheLoai, @MoTa)";
+                string query = "INSERT INTO TheLoai (TenTheLoai) VALUES (@TenTheLoai)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TenTheLoai", tl.TenTheLoai);
 
