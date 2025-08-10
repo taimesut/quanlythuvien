@@ -1,5 +1,5 @@
 CREATE TABLE DocGia (
-    MaDocGia INT PRIMARY KEY,
+    MaDocGia INT PRIMARY KEY AUTO_INCREMENT,
     HoVaTen VARCHAR(100) CHARACTER SET utf8mb4,
     NgaySinh DATE,
     DiaChi VARCHAR(200) CHARACTER SET utf8mb4,
@@ -8,7 +8,7 @@ CREATE TABLE DocGia (
 );
 
 CREATE TABLE TacGia (
-    MaTacGia INT PRIMARY KEY,
+    MaTacGia INT PRIMARY KEY AUTO_INCREMENT,
     HoVaTen VARCHAR(100) CHARACTER SET utf8mb4,
     NgaySinh DATE,
     DiaChi VARCHAR(200) CHARACTER SET utf8mb4,
@@ -17,12 +17,12 @@ CREATE TABLE TacGia (
 );
 
 CREATE TABLE TheLoai (
-    MaTheLoai INT PRIMARY KEY,
+    MaTheLoai INT PRIMARY KEY AUTO_INCREMENT,
     TenTheLoai VARCHAR(100) CHARACTER SET utf8mb4
 );
 
 CREATE TABLE NhaXuatBan (
-    MaNhaXuatBan INT PRIMARY KEY,
+    MaNhaXuatBan INT PRIMARY KEY AUTO_INCREMENT,
     TenNhaCungCap VARCHAR(200) CHARACTER SET utf8mb4,
     SoDienThoai VARCHAR(20),
     Gmail VARCHAR(100),
@@ -30,7 +30,7 @@ CREATE TABLE NhaXuatBan (
 );
 
 CREATE TABLE NhaCungCap (
-    MaNhaCungCap INT PRIMARY KEY,
+    MaNhaCungCap INT PRIMARY KEY AUTO_INCREMENT,
     TenNhaCungCap VARCHAR(200) CHARACTER SET utf8mb4,
     SoDienThoai VARCHAR(20),
     Gmail VARCHAR(100),
@@ -38,7 +38,7 @@ CREATE TABLE NhaCungCap (
 );
 
 CREATE TABLE Sach (
-    MaSach INT PRIMARY KEY,
+    MaSach INT PRIMARY KEY AUTO_INCREMENT,
     MaNhaXuatBan INT,
     MaTheLoai INT,
     MaTacGia INT,
@@ -66,7 +66,7 @@ CREATE TABLE NguoiDung (
 );
 
 CREATE TABLE PhieuMuon (
-    MaPhieuMuon INT PRIMARY KEY,
+    MaPhieuMuon INT PRIMARY KEY AUTO_INCREMENT,
     MaNguoiDung INT,
     MaDocGia INT,
     NgayMuon DATE,
@@ -85,7 +85,7 @@ CREATE TABLE ChiTietMuonSach (
 );
 
 CREATE TABLE PhieuNhap (
-    MaPhieuNhap INT PRIMARY KEY,
+    MaPhieuNhap INT PRIMARY KEY AUTO_INCREMENT,
     MaNguoiDung INT,
     MaNhaCungCap INT,
     NgayLapPhieu DATE,
@@ -104,7 +104,7 @@ CREATE TABLE ChiTietNhapSach (
 );
 
 CREATE TABLE QuyDinh (
-    MaQuyDinh INT PRIMARY KEY,
+    MaQuyDinh INT PRIMARY KEY AUTO_INCREMENT,
     SoNgayMuonToiDa INT
 );
 
