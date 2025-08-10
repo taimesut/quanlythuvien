@@ -98,61 +98,80 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUSINESS\DocGia_BUS.cs" />
-    <Compile Include="BUSINESS\NhanVien_BUS.cs" />
-    <Compile Include="BUSINESS\NhaCungCap_BUS.cs" />
-    <Compile Include="BUSINESS\Sach_BUS.cs" />
-    <Compile Include="BUSINESS\TacGia_BUS.cs" />
-    <Compile Include="BUSINESS\TheLoai_BUS.cs" />
-    <Compile Include="DATA_ACCESS\DbConnection.cs" />
-    <Compile Include="DATA_ACCESS\DocGiaDAL.cs" />
-    <Compile Include="DATA_ACCESS\NhanVienDAL.cs" />
-    <Compile Include="DATA_ACCESS\NhaCungCapDAL.cs" />
-    <Compile Include="DATA_ACCESS\SachDAL.cs" />
-    <Compile Include="DATA_ACCESS\TacGiaDAL.cs" />
-    <Compile Include="DATA_ACCESS\TheLoaiDAL.cs" />
-    <Compile Include="DTO\DocGiaDTO.cs" />
-    <Compile Include="DTO\NhanVienDTO.cs" />
-    <Compile Include="DTO\NhaCungCapDTO.cs" />
-    <Compile Include="DTO\SachDTO.cs" />
-    <Compile Include="DTO\TacGiaDTO.cs" />
-    <Compile Include="DTO\TheLoaiDTO.cs" />
-    <Compile Include="GUI\frmCustom.cs">
+    <Compile Include="DTOs\ChiTietPhieuMuonDTO.cs" />
+    <Compile Include="DTOs\DocGiaDTO.cs" />
+    <Compile Include="DTOs\NhanVienDTO.cs" />
+    <Compile Include="DTOs\PhieuMuonDTO.cs" />
+    <Compile Include="DTOs\QuyDinhDTO.cs" />
+    <Compile Include="DTOs\SachDTO.cs" />
+    <Compile Include="DTOs\TheLoaiDTO.cs" />
+    <Compile Include="GUIs\frmDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmCustom.Designer.cs">
-      <DependentUpon>frmCustom.cs</DependentUpon>
+    <Compile Include="GUIs\frmDocGia.Designer.cs">
+      <DependentUpon>frmDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FrmDangNhap.cs">
+    <Compile Include="GUIs\frmQuyDinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FrmDangNhap.Designer.cs">
+    <Compile Include="GUIs\frmQuyDinh.Designer.cs">
+      <DependentUpon>frmQuyDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\frmSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\frmSach.Designer.cs">
+      <DependentUpon>frmSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ChiTietPhieuMuonRepository.cs" />
+    <Compile Include="Repositories\DbConnection.cs" />
+    <Compile Include="GUIs\FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\FrmDangNhap.Designer.cs">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FrmDashBoard.cs">
+    <Compile Include="GUIs\FrmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\FrmDashBoard.Designer.cs">
+    <Compile Include="GUIs\FrmDashBoard.Designer.cs">
       <DependentUpon>FrmDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmTheLoai.cs">
+    <Compile Include="GUIs\frmTheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmTheLoai.Designer.cs">
+    <Compile Include="GUIs\frmTheLoai.Designer.cs">
       <DependentUpon>frmTheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\frmCustom.resx">
-      <DependentUpon>frmCustom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FrmDangNhap.resx">
+    <Compile Include="Repositories\DocGiaRepository.cs" />
+    <Compile Include="Repositories\NhanVienRepository.cs" />
+    <Compile Include="Repositories\PhieuMuonRepository.cs" />
+    <Compile Include="Repositories\QuyDinhRepository.cs" />
+    <Compile Include="Repositories\SachRepository.cs" />
+    <Compile Include="Repositories\TheLoaiRepository.cs" />
+    <Compile Include="Services\DocGiaService.cs" />
+    <Compile Include="Services\NhanVienService.cs" />
+    <Compile Include="Services\SachService.cs" />
+    <Compile Include="Services\TheLoaiService.cs" />
+    <Compile Include="Session.cs" />
+    <EmbeddedResource Include="GUIs\FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FrmDashBoard.resx">
+    <EmbeddedResource Include="GUIs\FrmDashBoard.resx">
       <DependentUpon>FrmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmTheLoai.resx">
+    <EmbeddedResource Include="GUIs\frmDocGia.resx">
+      <DependentUpon>frmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\frmQuyDinh.resx">
+      <DependentUpon>frmQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\frmSach.resx">
+      <DependentUpon>frmSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\frmTheLoai.resx">
       <DependentUpon>frmTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -178,9 +197,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\TheLoai\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

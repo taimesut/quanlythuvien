@@ -3,12 +3,91 @@
   "WorkspaceRootPath": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\gui\\frmtheloai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\gui\\frmtheloai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\repositories\\nhanvienrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\repositories\\nhanvienrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\gui\\frmcustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\gui\\frmcustom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\dtos\\nhanviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\dtos\\nhanviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\repositories\\docgiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\repositories\\docgiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmdocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmdocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmdocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmdocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\services\\docgiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\services\\docgiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\repositories\\sachrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\repositories\\sachrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\dtos\\docgiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\dtos\\docgiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Windows\\AppData\\Local\\Temp\\Rar$DIa9356.40093.rartemp\\frmDocGia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\services\\nhanvienservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\services\\nhanvienservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmdocgia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmdocgia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmquydinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmquydinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmquydinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmquydinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\services\\sachservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\services\\sachservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmtheloai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmtheloai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmtheloai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmtheloai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\guis\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\guis\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|c:\\users\\windows\\desktop\\quanlythuvien\\quanlythuvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13EA1B-4C38-4BEE-9293-1AFBD8E36DB2}|QuanLyThuVien\\QuanLyThuVien.csproj|solutionrelative:quanlythuvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +97,286 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmCustom.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUI\\frmCustom.cs",
-              "RelativeDocumentMoniker": "QuanLyThuVien\\GUI\\frmCustom.cs",
-              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUI\\frmCustom.cs [Design]",
-              "RelativeToolTip": "QuanLyThuVien\\GUI\\frmCustom.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "DocGiaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Repositories\\DocGiaRepository.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Repositories\\DocGiaRepository.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Repositories\\DocGiaRepository.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Repositories\\DocGiaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T15:13:27.634Z",
+              "WhenOpened": "2025-08-10T11:55:00.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmDocGia.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmDocGia.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmDocGia.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmDocGia.cs",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmDocGia.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAMwFIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:52:53.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NhanVienDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\DTOs\\NhanVienDTO.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\DTOs\\NhanVienDTO.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\DTOs\\NhanVienDTO.cs",
+              "RelativeToolTip": "QuanLyThuVien\\DTOs\\NhanVienDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:51:44.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DocGiaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\DTOs\\DocGiaDTO.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\DTOs\\DocGiaDTO.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\DTOs\\DocGiaDTO.cs",
+              "RelativeToolTip": "QuanLyThuVien\\DTOs\\DocGiaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:47:22.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmDocGia.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmDocGia.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmDocGia.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmDocGia.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmDocGia.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:48:10.037Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmTheLoai.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUI\\frmTheLoai.cs",
-              "RelativeDocumentMoniker": "QuanLyThuVien\\GUI\\frmTheLoai.cs",
-              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUI\\frmTheLoai.cs [Design]",
-              "RelativeToolTip": "QuanLyThuVien\\GUI\\frmTheLoai.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "frmSach.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmSach.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmSach.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmSach.cs",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmSach.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T15:13:25.994Z",
+              "WhenOpened": "2025-08-10T10:53:08.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SachRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Repositories\\SachRepository.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Repositories\\SachRepository.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Repositories\\SachRepository.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Repositories\\SachRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:38:57.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NhanVienRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Repositories\\NhanVienRepository.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Repositories\\NhanVienRepository.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Repositories\\NhanVienRepository.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Repositories\\NhanVienRepository.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAjwGAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T12:13:20.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DocGiaService.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Services\\DocGiaService.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Services\\DocGiaService.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Services\\DocGiaService.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Services\\DocGiaService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwCoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T12:05:44.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmDocGia.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\AppData\\Local\\Temp\\Rar$DIa9356.40093.rartemp\\frmDocGia.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\Rar$DIa9356.40093.rartemp\\frmDocGia.cs",
+              "ToolTip": "C:\\Users\\Windows\\AppData\\Local\\Temp\\Rar$DIa9356.40093.rartemp\\frmDocGia.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\Rar$DIa9356.40093.rartemp\\frmDocGia.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAADEAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T12:06:31.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NhanVienService.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Services\\NhanVienService.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Services\\NhanVienService.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Services\\NhanVienService.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Services\\NhanVienService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:34:45.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmDocGia.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmDocGia.Designer.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmDocGia.Designer.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmDocGia.Designer.cs",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmDocGia.Designer.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAArwFkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T12:09:37.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmQuyDinh.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmQuyDinh.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmQuyDinh.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmQuyDinh.cs",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmQuyDinh.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:33:22.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmQuyDinh.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmQuyDinh.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmQuyDinh.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmQuyDinh.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmQuyDinh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:31:00.354Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SachService.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Services\\SachService.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Services\\SachService.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Services\\SachService.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Services\\SachService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T10:56:20.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmSach.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmSach.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmSach.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmSach.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmSach.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T10:53:07.374Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FrmDangNhap.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\FrmDangNhap.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\FrmDangNhap.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\FrmDangNhap.cs",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\FrmDangNhap.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T10:59:16.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FrmDashBoard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\FrmDashBoard.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\FrmDashBoard.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\FrmDashBoard.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\FrmDashBoard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T10:58:34.625Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmTheLoai.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmTheLoai.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmTheLoai.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmTheLoai.cs",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmTheLoai.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAcwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T10:59:38.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Program.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\Program.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Program.cs",
+              "RelativeToolTip": "QuanLyThuVien\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T11:00:46.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmTheLoai.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmTheLoai.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\frmTheLoai.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\frmTheLoai.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\frmTheLoai.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T10:59:31.17Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FrmDangNhap.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\FrmDangNhap.cs",
+              "RelativeDocumentMoniker": "QuanLyThuVien\\GUIs\\FrmDangNhap.cs",
+              "ToolTip": "C:\\Users\\Windows\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\GUIs\\FrmDangNhap.cs [Design]",
+              "RelativeToolTip": "QuanLyThuVien\\GUIs\\FrmDangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T10:59:14.05Z",
               "EditorCaption": " [Design]"
             }
           ]
