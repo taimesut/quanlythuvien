@@ -32,6 +32,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelInput = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.picBoxAnh = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.cboTheLoai = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
@@ -47,16 +51,16 @@
             this.lblMaTheLoai = new System.Windows.Forms.Label();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.btnChoose = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.panelDataGridView = new System.Windows.Forms.Panel();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelInput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAnh)).BeginInit();
             this.panelButton.SuspendLayout();
             this.panelDataGridView.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +112,8 @@
             // 
             // panelInput
             // 
+            this.panelInput.Controls.Add(this.label8);
+            this.panelInput.Controls.Add(this.picBoxAnh);
             this.panelInput.Controls.Add(this.label7);
             this.panelInput.Controls.Add(this.txtTimKiem);
             this.panelInput.Controls.Add(this.cboTheLoai);
@@ -129,6 +135,41 @@
             this.panelInput.Name = "panelInput";
             this.panelInput.Size = new System.Drawing.Size(648, 204);
             this.panelInput.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(350, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Tìm kiếm";
+            // 
+            // picBoxAnh
+            // 
+            this.picBoxAnh.Location = new System.Drawing.Point(431, 19);
+            this.picBoxAnh.Name = "picBoxAnh";
+            this.picBoxAnh.Size = new System.Drawing.Size(177, 130);
+            this.picBoxAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxAnh.TabIndex = 17;
+            this.picBoxAnh.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(350, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Tìm kiếm";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(431, 168);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(182, 20);
+            this.txtTimKiem.TabIndex = 15;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // cboTheLoai
             // 
@@ -246,6 +287,7 @@
             // 
             // panelButton
             // 
+            this.panelButton.Controls.Add(this.btnChoose);
             this.panelButton.Controls.Add(this.btnThem);
             this.panelButton.Controls.Add(this.btnCapNhat);
             this.panelButton.Controls.Add(this.btnXoa);
@@ -254,6 +296,16 @@
             this.panelButton.Name = "panelButton";
             this.panelButton.Size = new System.Drawing.Size(347, 204);
             this.panelButton.TabIndex = 1;
+            // 
+            // btnChoose
+            // 
+            this.btnChoose.Location = new System.Drawing.Point(113, 50);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.Size = new System.Drawing.Size(75, 30);
+            this.btnChoose.TabIndex = 7;
+            this.btnChoose.Text = "Chọn ảnh";
+            this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
             // btnThem
             // 
@@ -294,23 +346,6 @@
             this.panelDataGridView.Size = new System.Drawing.Size(1007, 396);
             this.panelDataGridView.TabIndex = 2;
             // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(442, 46);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(182, 20);
-            this.txtTimKiem.TabIndex = 15;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(361, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Tìm kiếm";
-            // 
             // frmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +360,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxAnh)).EndInit();
             this.panelButton.ResumeLayout(false);
             this.panelDataGridView.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -358,5 +394,8 @@
         private System.Windows.Forms.ComboBox cboTheLoai;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.PictureBox picBoxAnh;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnChoose;
     }
 }

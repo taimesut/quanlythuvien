@@ -32,9 +32,9 @@ namespace QuanLyThuVien.Repositories
                     while (reader.Read())
                     {
                         list.Add(new PhieuMuonDTO(
-                            reader["MaPhieuMuon"].ToString(),
-                            reader["MaNhanVien"].ToString(),
-                            reader["MaDocGia"].ToString(),
+                             reader.GetInt32("MaPhieuMuon"),
+                             reader.GetInt32("MaNhanVien"),
+                             reader.GetInt32("MaDocGia"),
                             reader.GetDateTime("NgayMuon"),
                             reader.GetDateTime("HanTra"),
                             reader.GetInt32("TrangThai")
@@ -64,12 +64,12 @@ namespace QuanLyThuVien.Repositories
                         if (reader.Read())
                         {
                             phieuMuon = new PhieuMuonDTO(
-                                reader["MaPhieuMuon"].ToString(),
-                                reader["MaNhanVien"].ToString(),
-                                reader["MaDocGia"].ToString(),
-                                reader.GetDateTime("NgayMuon"),
-                                reader.GetDateTime("HanTra"),
-                                reader.GetInt32("TrangThai")
+                                reader.GetInt32("MaPhieuMuon"),
+                             reader.GetInt32("MaNhanVien"),
+                             reader.GetInt32("MaDocGia"),
+                            reader.GetDateTime("NgayMuon"),
+                            reader.GetDateTime("HanTra"),
+                            reader.GetInt32("TrangThai")
                             );
                         }
                     }
@@ -95,6 +95,43 @@ namespace QuanLyThuVien.Repositories
                     cmd.Parameters.AddWithValue("@trangThai", pm.TrangThai);
 
                     return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public int? AddAndGetId(PhieuMuonDTO pm)
+        {
+            using (var conn = _db.GetConnection())
+            {
+                conn.Open();
+                using (var transaction = conn.BeginTransaction())
+                {
+                    try
+                    {
+                        string sql = @"INSERT INTO PhieuMuon (MaNhanVien, MaDocGia, NgayMuon, HanTra, TrangThai)
+                               VALUES (@manv, @madg, @ngayMuon, @hanTra, @trangThai);
+                               SELECT LAST_INSERT_ID();";  // Lấy ID vừa insert
+
+                        using (var cmd = new MySqlCommand(sql, conn, transaction))
+                        {
+                            cmd.Parameters.AddWithValue("@manv", pm.MaNhanVien);
+                            cmd.Parameters.AddWithValue("@madg", pm.MaDocGia);
+                            cmd.Parameters.AddWithValue("@ngayMuon", pm.NgayMuon);
+                            cmd.Parameters.AddWithValue("@hanTra", pm.HanTra);
+                            cmd.Parameters.AddWithValue("@trangThai", pm.TrangThai);
+
+                            var result = cmd.ExecuteScalar();
+                            int insertedId = Convert.ToInt32(result);
+
+                            transaction.Commit();
+                            return insertedId;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        return null;
+                    }
                 }
             }
         }
@@ -157,12 +194,12 @@ namespace QuanLyThuVien.Repositories
                         while (reader.Read())
                         {
                             list.Add(new PhieuMuonDTO(
-                                reader["MaPhieuMuon"].ToString(),
-                                reader["MaNhanVien"].ToString(),
-                                reader["MaDocGia"].ToString(),
-                                reader.GetDateTime("NgayMuon"),
-                                reader.GetDateTime("HanTra"),
-                                reader.GetInt32("TrangThai")
+                                reader.GetInt32("MaPhieuMuon"),
+                             reader.GetInt32("MaNhanVien"),
+                             reader.GetInt32("MaDocGia"),
+                            reader.GetDateTime("NgayMuon"),
+                            reader.GetDateTime("HanTra"),
+                            reader.GetInt32("TrangThai")
                             ));
                         }
                     }

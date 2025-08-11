@@ -1,4 +1,5 @@
 ﻿using QuanLyThuVien.DTOs;
+using QuanLyThuVien.Repositories;
 using QuanLyThuVien.Services;
 using System;
 using System.Collections.Generic;
@@ -77,7 +78,13 @@ namespace QuanLyThuVien.GUIs
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            var sach = new DocGiaDTO(
+            DocGiaRepository docGiaRepository = new DocGiaRepository();
+            if (docGiaRepository.IsSoDienThoaiTrung(txtSoDienThoai.Text)) {
+                MessageBox.Show("Số điện thoại đã tồn tại");
+            }
+            else
+            {
+                var sach = new DocGiaDTO(
                0,
                 txtHoTen.Text.ToString(),
                 cboGioiTinh.SelectedItem.ToString(),
@@ -85,8 +92,9 @@ namespace QuanLyThuVien.GUIs
                 txtSoDienThoai.Text.ToString()
             );
 
-            docGiaService.ThemDocGia(sach);
-            LoadDocGia();
+                docGiaService.ThemDocGia(sach);
+                LoadDocGia();
+            }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)

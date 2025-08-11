@@ -8,7 +8,7 @@ namespace QuanLyThuVien.DTOs
 {
     public class NhanVienDTO
     {
-        public NhanVienDTO(int maNhanVien, string tenTaiKhoan, string matKhau, string hoVaTen, string diaChi, string gioiTinh, string soDienThoai, string chucVu)
+        public NhanVienDTO(int maNhanVien, string tenTaiKhoan, string matKhau, string hoVaTen, string diaChi, string gioiTinh, string soDienThoai, string chucVu, DateTime ngaySinh)
         {
             MaNhanVien = maNhanVien;
             TenTaiKhoan = tenTaiKhoan;
@@ -18,7 +18,10 @@ namespace QuanLyThuVien.DTOs
             GioiTinh = gioiTinh;
             SoDienThoai = soDienThoai;
             ChucVu = chucVu;
+            NgaySinh = ngaySinh;
         }
+
+        public NhanVienDTO() { }
 
         public int MaNhanVien {  get; set; }
         public string TenTaiKhoan {  get; set; }
@@ -28,5 +31,6 @@ namespace QuanLyThuVien.DTOs
         public string GioiTinh {  get; set; }
         public string SoDienThoai {  get; set; }
         public string ChucVu {  get; set; }
+        public DateTime NgaySinh { get; set; }
     }
 }

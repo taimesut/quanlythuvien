@@ -43,12 +43,13 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblMaTheLoai = new System.Windows.Forms.Label();
+            this.lbMaDocGia = new System.Windows.Forms.Label();
             this.txtMaDocGia = new System.Windows.Forms.TextBox();
             this.panelInput = new System.Windows.Forms.Panel();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelDataGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).BeginInit();
             this.panelButton.SuspendLayout();
@@ -197,14 +198,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Họ Tên";
             // 
-            // lblMaTheLoai
+            // lbMaDocGia
             // 
-            this.lblMaTheLoai.AutoSize = true;
-            this.lblMaTheLoai.Location = new System.Drawing.Point(10, 19);
-            this.lblMaTheLoai.Name = "lblMaTheLoai";
-            this.lblMaTheLoai.Size = new System.Drawing.Size(50, 13);
-            this.lblMaTheLoai.TabIndex = 0;
-            this.lblMaTheLoai.Text = "Mã Sách";
+            this.lbMaDocGia.AutoSize = true;
+            this.lbMaDocGia.Location = new System.Drawing.Point(10, 19);
+            this.lbMaDocGia.Name = "lbMaDocGia";
+            this.lbMaDocGia.Size = new System.Drawing.Size(61, 13);
+            this.lbMaDocGia.TabIndex = 0;
+            this.lbMaDocGia.Text = "Mã độc giả";
             // 
             // txtMaDocGia
             // 
@@ -226,7 +227,7 @@
             this.panelInput.Controls.Add(this.label2);
             this.panelInput.Controls.Add(this.label1);
             this.panelInput.Controls.Add(this.txtHoTen);
-            this.panelInput.Controls.Add(this.lblMaTheLoai);
+            this.panelInput.Controls.Add(this.lbMaDocGia);
             this.panelInput.Controls.Add(this.txtMaDocGia);
             this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInput.Location = new System.Drawing.Point(3, 3);
@@ -307,11 +308,12 @@
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblMaTheLoai;
+        private System.Windows.Forms.Label lbMaDocGia;
         private System.Windows.Forms.TextBox txtMaDocGia;
         private System.Windows.Forms.Panel panelInput;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

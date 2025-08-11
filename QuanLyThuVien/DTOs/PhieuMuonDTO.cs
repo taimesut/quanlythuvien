@@ -8,7 +8,7 @@ namespace QuanLyThuVien.DTOs
 {
     public class PhieuMuonDTO
     {
-        public PhieuMuonDTO(string maPhieuMuon, string maNhanVien, string maDocGia, DateTime ngayMuon, DateTime hanTra, int trangThai)
+        public PhieuMuonDTO(int maPhieuMuon, int maNhanVien, int maDocGia, DateTime ngayMuon, DateTime hanTra, int trangThai)
         {
             MaPhieuMuon = maPhieuMuon;
             MaNhanVien = maNhanVien;
@@ -18,9 +18,9 @@ namespace QuanLyThuVien.DTOs
             TrangThai = trangThai;
         }
 
-        public string MaPhieuMuon {  get; set; }
-        public string MaNhanVien {  get; set; }
-        public string MaDocGia {  get; set; }
+        public int MaPhieuMuon {  get; set; }
+        public int MaNhanVien {  get; set; }
+        public int MaDocGia {  get; set; }
         public DateTime NgayMuon {  get; set; }
         public DateTime HanTra {  get; set; }
         public int TrangThai{  get; set; }

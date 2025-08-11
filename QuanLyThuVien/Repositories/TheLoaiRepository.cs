@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyThuVien.Repositories
 {
@@ -16,6 +17,13 @@ namespace QuanLyThuVien.Repositories
         {
             _db = new DbConnection();
         }
+
+        public bool IsTenTheLoaiTonTai(string tenTheLoai)
+        {
+            var all = GetAll();
+            return all.Any(tl => tl.TenTheLoai.Trim().ToLower() == tenTheLoai.Trim().ToLower());
+        }
+
 
         public List<TheLoaiDTO> GetAll()
         {
@@ -73,10 +81,17 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
+                if (IsTenTheLoaiTonTai(theLoai.TenTheLoai))
+                {
+                    MessageBox.Show("Thể loại đã tồn tại");
+                    return false;
+                }
+
                 string sql = "INSERT INTO TheLoai (TenTheLoai) VALUES (@ten)";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@ten", theLoai.TenTheLoai);
+                    MessageBox.Show("Cập nhật thành công!");
                     return cmd.ExecuteNonQuery() > 0;
                 }
             }

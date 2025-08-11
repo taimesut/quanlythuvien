@@ -11,27 +11,24 @@ namespace LibraryDashboard
         public FrmDashBoard()
         {
             InitializeComponent();
-            AddListItemMenuSiderbar();
+        }
 
+        private void FrmDashBoard_Load(object sender, EventArgs e)
+        {
+            AddListItemMenuSiderbar();
         }
 
         private void AddListItemMenuSiderbar()
         {
-            
             AddSidebarButton("Thể loại");
             AddSidebarButton("Sách");
             AddSidebarButton("Quy định");
             AddSidebarButton("Độc giả");
-            //AddSidebarButton("Đọc giả");
-            //AddSidebarButton("Nhân viên");
-            //AddSidebarButton("Sách");
-            //AddSidebarButton("Nhà xuất bản");
-            //AddSidebarButton("Phiếu mượn");
-            //AddSidebarButton("Nhà cung cấp");
+            AddSidebarButton("Nhân viên");
+            AddSidebarButton("Phiếu mượn");
+            AddSidebarButton("Thống kê");
             AddSidebarButton("Đăng xuất");
-
         }
-
 
         private void AddSidebarButton(string text)
         {
@@ -40,32 +37,36 @@ namespace LibraryDashboard
             btn.ForeColor = Color.White;
             btn.FlatStyle = FlatStyle.Flat;
             btn.FlatAppearance.BorderSize = 0;
-            btn.BackColor = Color.FromArgb(33, 37, 41); // Màu xám đen
+            btn.BackColor = Color.FromArgb(33, 37, 41);
             btn.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
             btn.Dock = DockStyle.Top;
             btn.Height = 40;
+            btn.Tag = text;
 
-            // Sự kiện click
             btn.Click += SidebarButton_Click;
 
-            // Thêm vào panel sidebar
             panelSidebar.Controls.Add(btn);
-        }
-
-        private void LoadFormToMainPanel(Form frm)
-        {
-            panelMain.Controls.Clear();        // Xóa control cũ
-            frm.TopLevel = false;                // Không phải form độc lập
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Dock = DockStyle.Fill;           // Fill toàn bộ panel
-            panelMain.Controls.Add(frm);
-            frm.Show();
+            panelSidebar.Controls.SetChildIndex(btn, 0);
         }
 
         private void SidebarButton_Click(object sender, EventArgs e)
         {
+            // Reset màu tất cả button
+            foreach (Control ctrl in panelSidebar.Controls)
+            {
+                if (ctrl is Button b)
+                {
+                    b.BackColor = Color.FromArgb(33, 37, 41);
+                    b.ForeColor = Color.White;
+                }
+            }
+
+            // Đổi màu nút click
             var btn = sender as Button;
-            string menu = btn.Text;
+            btn.BackColor = Color.FromArgb(52, 152, 219);
+            btn.ForeColor = Color.White;
+
+            string menu = btn.Tag.ToString();
 
             if (menu == "Đăng xuất")
             {
@@ -79,21 +80,37 @@ namespace LibraryDashboard
             switch (menu)
             {
                 case "Thể loại":
-                    LoadFormToMainPanel(new QuanLyThuVien.GUIs.frmTheLoai());
+                    LoadFormToMainPanel(new frmTheLoai());
                     break;
                 case "Sách":
-                    LoadFormToMainPanel(new QuanLyThuVien.GUIs.frmSach());
+                    LoadFormToMainPanel(new frmSach());
                     break;
                 case "Quy định":
-                    LoadFormToMainPanel(new QuanLyThuVien.GUIs.frmQuyDinh());
+                    LoadFormToMainPanel(new frmQuyDinh());
                     break;
                 case "Độc giả":
-                    LoadFormToMainPanel(new QuanLyThuVien.GUIs.frmDocGia());
+                    LoadFormToMainPanel(new frmDocGia());
                     break;
-                default:
+                case "Nhân viên":
+                    LoadFormToMainPanel(new frmNhanVien());
+                    break;
+                case "Phiếu mượn":
+                    LoadFormToMainPanel(new frmPhieuMuon());
+                    break;
+                case "Thống kê":
+                    LoadFormToMainPanel(new FrmThongKe());
                     break;
             }
         }
 
+        private void LoadFormToMainPanel(Form frm)
+        {
+            panelMain.Controls.Clear();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(frm);
+            frm.Show();
+        }
     }
 }

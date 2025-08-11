@@ -8,7 +8,7 @@ namespace QuanLyThuVien.DTOs
 {
     public class SachDTO
     {
-        public SachDTO(int maSach, int maTheLoai, string nhaXuatBan, string tacGia, string tenSach, int namXuatBan, int soLuong)
+        public SachDTO(int maSach, int maTheLoai, string nhaXuatBan, string tacGia, string tenSach, int namXuatBan, int soLuong, string anh)
         {
             MaSach = maSach;
             MaTheLoai = maTheLoai;
@@ -17,6 +17,8 @@ namespace QuanLyThuVien.DTOs
             TenSach = tenSach;
             NamXuatBan = namXuatBan;
             SoLuong = soLuong;
+            Anh = anh;
+
         }
 
         public int MaSach {  get; set; }
@@ -26,5 +28,6 @@ namespace QuanLyThuVien.DTOs
         public string TenSach {  get; set; }
         public int NamXuatBan {  get; set; }
         public int SoLuong {  get; set; }
+        public string Anh {  get; set; }    
     }
 }

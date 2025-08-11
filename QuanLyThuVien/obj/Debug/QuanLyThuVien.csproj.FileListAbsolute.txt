@@ -111,3 +111,9 @@ C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe.config
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.frmQuyDinh.resources
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.frmDocGia.resources
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.frmNhanVien.resources
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\bin\Debug\CloudinaryDotNet.dll
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\bin\Debug\CloudinaryDotNet.xml
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.frmPhieuMuon.resources

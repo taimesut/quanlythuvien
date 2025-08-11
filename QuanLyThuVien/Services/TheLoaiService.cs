@@ -27,6 +27,8 @@ namespace QuanLyThuVien.Services
             return _theLoaiRepo.GetById(maTheLoai);
         }
 
+
+
         public bool Add(string tenTheLoai)
         {
             if (string.IsNullOrWhiteSpace(tenTheLoai))

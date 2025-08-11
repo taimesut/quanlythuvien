@@ -47,7 +47,7 @@ namespace QuanLyThuVien.GUIs
                 theLoaiService.Update(ma, txtTenTheLoai.Text);
                 LoadData();
                 ClearForm();
-                MessageBox.Show("Cập nhật thành công!");
+              
             }
             catch (Exception ex)
             {

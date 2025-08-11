@@ -2,10 +2,6 @@
 using QuanLyThuVien.DTOs;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuanLyThuVien.Repositories
 {
@@ -25,8 +21,8 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = @"SELECT MaNhanVien, TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu
-                               FROM NhanVien";
+                string sql = @"SELECT MaNhanVien, TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu, NgaySinh
+                               FROM NhanVien WHERE ChucVu='Nhân viên'";
                 using (var cmd = new MySqlCommand(sql, conn))
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -40,7 +36,8 @@ namespace QuanLyThuVien.Repositories
                             reader["DiaChi"].ToString(),
                             reader["GioiTinh"].ToString(),
                             reader["SoDienThoai"].ToString(),
-                            reader["ChucVu"].ToString()
+                            reader["ChucVu"].ToString(),
+                            reader.GetDateTime("NgaySinh")
                         ));
                     }
                 }
@@ -56,7 +53,7 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = @"SELECT MaNhanVien, TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu
+                string sql = @"SELECT MaNhanVien, TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu, NgaySinh
                                FROM NhanVien
                                WHERE MaNhanVien = @id";
                 using (var cmd = new MySqlCommand(sql, conn))
@@ -74,7 +71,8 @@ namespace QuanLyThuVien.Repositories
                                 reader["DiaChi"].ToString(),
                                 reader["GioiTinh"].ToString(),
                                 reader["SoDienThoai"].ToString(),
-                                reader["ChucVu"].ToString()
+                                reader["ChucVu"].ToString(),
+                                reader.GetDateTime("NgaySinh")
                             );
                         }
                     }
@@ -89,8 +87,8 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = @"INSERT INTO NhanVien (TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu)
-                               VALUES (@tk, @mk, @hoten, @diaChi, @gioiTinh, @sdt, @chucVu)";
+                string sql = @"INSERT INTO NhanVien (TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu, NgaySinh)
+                               VALUES (@tk, @mk, @hoten, @diaChi, @gioiTinh, @sdt, @chucVu, @ngaySinh)";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@tk", nv.TenTaiKhoan);
@@ -100,6 +98,7 @@ namespace QuanLyThuVien.Repositories
                     cmd.Parameters.AddWithValue("@gioiTinh", nv.GioiTinh);
                     cmd.Parameters.AddWithValue("@sdt", nv.SoDienThoai);
                     cmd.Parameters.AddWithValue("@chucVu", nv.ChucVu);
+                    cmd.Parameters.AddWithValue("@ngaySinh", nv.NgaySinh);
 
                     return cmd.ExecuteNonQuery() > 0;
                 }
@@ -118,7 +117,8 @@ namespace QuanLyThuVien.Repositories
                                    DiaChi = @diaChi,
                                    GioiTinh = @gioiTinh,
                                    SoDienThoai = @sdt,
-                                   ChucVu = @chucVu
+                                   ChucVu = @chucVu,
+                                   NgaySinh = @ngaySinh
                                WHERE MaNhanVien = @id";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
@@ -129,6 +129,7 @@ namespace QuanLyThuVien.Repositories
                     cmd.Parameters.AddWithValue("@gioiTinh", nv.GioiTinh);
                     cmd.Parameters.AddWithValue("@sdt", nv.SoDienThoai);
                     cmd.Parameters.AddWithValue("@chucVu", nv.ChucVu);
+                    cmd.Parameters.AddWithValue("@ngaySinh", nv.NgaySinh);
                     cmd.Parameters.AddWithValue("@id", nv.MaNhanVien);
 
                     return cmd.ExecuteNonQuery() > 0;
@@ -157,7 +158,7 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = @"SELECT MaNhanVien, TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu
+                string sql = @"SELECT MaNhanVien, TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu, NgaySinh
                                FROM NhanVien
                                WHERE HoVaTen LIKE @kw";
                 using (var cmd = new MySqlCommand(sql, conn))
@@ -175,7 +176,8 @@ namespace QuanLyThuVien.Repositories
                                 reader["DiaChi"].ToString(),
                                 reader["GioiTinh"].ToString(),
                                 reader["SoDienThoai"].ToString(),
-                                reader["ChucVu"].ToString()
+                                reader["ChucVu"].ToString(),
+                                reader.GetDateTime("NgaySinh")
                             ));
                         }
                     }
@@ -190,26 +192,30 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                var cmd = new MySqlCommand("SELECT * FROM NhanVien WHERE TenTaiKhoan = @Username", conn);
-                cmd.Parameters.AddWithValue("@Username", username);
-
-                var reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (var cmd = new MySqlCommand("SELECT * FROM NhanVien WHERE TenTaiKhoan = @Username", conn))
                 {
-                    return new NhanVienDTO(
-                        Convert.ToInt32(reader["MaNhanVien"]),
-                        reader["TenTaiKhoan"].ToString(),
-                        reader["MatKhau"].ToString(),
-                        reader["HoVaTen"].ToString(),
-                        reader["DiaChi"].ToString(),
-                        reader["GioiTinh"].ToString(),
-                        reader["SoDienThoai"].ToString(),
-                        reader["ChucVu"].ToString()
-                    );
+                    cmd.Parameters.AddWithValue("@Username", username);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new NhanVienDTO(
+                                Convert.ToInt32(reader["MaNhanVien"]),
+                                reader["TenTaiKhoan"].ToString(),
+                                reader["MatKhau"].ToString(),
+                                reader["HoVaTen"].ToString(),
+                                reader["DiaChi"].ToString(),
+                                reader["GioiTinh"].ToString(),
+                                reader["SoDienThoai"].ToString(),
+                                reader["ChucVu"].ToString(),
+                                reader.GetDateTime("NgaySinh")
+                            );
+                        }
+                    }
                 }
             }
             return null;
         }
-
     }
 }

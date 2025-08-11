@@ -78,7 +78,7 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = @"INSERT INTO ChiTietPhieuMuon (MaSach, MaPhieuMuon, SoLuong)
+                string sql = @"INSERT INTO ChiTietMuonSach (MaSach, MaPhieuMuon, SoLuong)
                                VALUES (@maSach, @maPM, @soLuong)";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {

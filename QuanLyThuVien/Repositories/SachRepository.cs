@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyThuVien.Repositories
 {
@@ -24,7 +25,7 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = "SELECT MaSach, MaTheLoai, NhaXuatBan, TacGia, TenSach, NamXuatBan, SoLuong FROM Sach";
+                string sql = "SELECT MaSach, MaTheLoai, NhaXuatBan, TacGia, TenSach, NamXuatBan, SoLuong, Anh FROM Sach";
                 using (var cmd = new MySqlCommand(sql, conn))
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -37,7 +38,8 @@ namespace QuanLyThuVien.Repositories
                             reader.GetString("TacGia"),
                             reader.GetString("TenSach"),
                             reader.GetInt32("NamXuatBan"),
-                            reader.GetInt32("SoLuong")
+                            reader.GetInt32("SoLuong"),
+                            reader.GetString("Anh")
                         ));
                     }
                 }
@@ -53,7 +55,7 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = "SELECT MaSach, MaTheLoai, NhaXuatBan, TacGia, TenSach, NamXuatBan, SoLuong FROM Sach WHERE MaSach = @id";
+                string sql = "SELECT MaSach, MaTheLoai, NhaXuatBan, TacGia, TenSach, NamXuatBan, SoLuong, Anh FROM Sach WHERE MaSach = @id";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
@@ -68,7 +70,8 @@ namespace QuanLyThuVien.Repositories
                                 reader.GetString("TacGia"),
                                 reader.GetString("TenSach"),
                                 reader.GetInt32("NamXuatBan"),
-                                reader.GetInt32("SoLuong")
+                                reader.GetInt32("SoLuong"),
+                                reader.GetString("Anh")
                             );
                         }
                     }
@@ -78,14 +81,38 @@ namespace QuanLyThuVien.Repositories
             return sach;
         }
 
+        public bool IsSachTonTai(string tenSach, string tacGia)
+        {
+            using (var conn = _db.GetConnection())
+            {
+                conn.Open();
+                string sql = "SELECT COUNT(*) FROM Sach WHERE TenSach = @tenSach AND TacGia = @tacGia";
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@tenSach", tenSach);
+                    cmd.Parameters.AddWithValue("@tacGia", tacGia);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
+
         public bool Add(SachDTO sach)
         {
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
+
+                if (IsSachTonTai(sach.TenSach, sach.TacGia))
+                {
+                    MessageBox.Show("Sách đã tồn tại rồi");
+                    return false;
+                }
+
                 string sql = @"
-                    INSERT INTO Sach (MaTheLoai, NhaXuatBan, TacGia, TenSach, NamXuatBan, SoLuong)
-                    VALUES (@maTheLoai, @nxb, @tacGia, @tenSach, @namXB, @soLuong)";
+                    INSERT INTO Sach (MaTheLoai, NhaXuatBan, TacGia, TenSach, NamXuatBan, SoLuong, Anh)
+                    VALUES (@maTheLoai, @nxb, @tacGia, @tenSach, @namXB, @soLuong, @Anh)";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@maTheLoai", sach.MaTheLoai);
@@ -94,7 +121,7 @@ namespace QuanLyThuVien.Repositories
                     cmd.Parameters.AddWithValue("@tenSach", sach.TenSach);
                     cmd.Parameters.AddWithValue("@namXB", sach.NamXuatBan);
                     cmd.Parameters.AddWithValue("@soLuong", sach.SoLuong);
-
+                    cmd.Parameters.AddWithValue("@anh", sach.Anh);
                     return cmd.ExecuteNonQuery() > 0;
                 }
             }
@@ -112,7 +139,8 @@ namespace QuanLyThuVien.Repositories
                         TacGia = @tacGia,
                         TenSach = @tenSach,
                         NamXuatBan = @namXB,
-                        SoLuong = @soLuong
+                        SoLuong = @soLuong,
+                        Anh = @anh
                     WHERE MaSach = @id";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
@@ -122,6 +150,7 @@ namespace QuanLyThuVien.Repositories
                     cmd.Parameters.AddWithValue("@tenSach", sach.TenSach);
                     cmd.Parameters.AddWithValue("@namXB", sach.NamXuatBan);
                     cmd.Parameters.AddWithValue("@soLuong", sach.SoLuong);
+                    cmd.Parameters.AddWithValue("@anh", sach.Anh);
                     cmd.Parameters.AddWithValue("@id", sach.MaSach);
 
                     return cmd.ExecuteNonQuery() > 0;

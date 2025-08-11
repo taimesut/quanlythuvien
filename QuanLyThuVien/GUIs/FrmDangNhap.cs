@@ -46,6 +46,9 @@ namespace QuanLyThuVien.GUIs
                 return;
             }
 
+            // đăng nhập thành công
+            Session.NhanVien = user;
+
             this.Hide();
 
             using (FrmDashBoard dashboard = new FrmDashBoard())

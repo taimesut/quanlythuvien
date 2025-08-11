@@ -77,6 +77,23 @@ namespace QuanLyThuVien.Repositories
             return dg;
         }
 
+        public bool IsSoDienThoaiTrung(string soDienThoai)
+        {
+            using (var conn = _db.GetConnection())
+            {
+                conn.Open();
+                string sql = "SELECT COUNT(*) FROM DocGia WHERE SoDienThoai = @sdt";
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@sdt", soDienThoai);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
+
+
         public bool Add(DocGiaDTO dg)
         {
             using (var conn = _db.GetConnection())
