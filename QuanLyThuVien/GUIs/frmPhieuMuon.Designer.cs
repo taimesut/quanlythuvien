@@ -47,6 +47,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNhapMaDocGia = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPhieuMuon)).BeginInit();
@@ -266,9 +267,20 @@
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(540, 337);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(100, 30);
+            this.btnXoa.TabIndex = 28;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // frmPhieuMuon
             // 
             this.ClientSize = new System.Drawing.Size(1052, 560);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtNhapMaDocGia);
             this.Controls.Add(this.groupBox1);
@@ -306,5 +318,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNhapMaDocGia;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnXoa;
     }
 }

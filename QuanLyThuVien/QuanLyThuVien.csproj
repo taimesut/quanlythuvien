@@ -158,11 +158,23 @@
     <Compile Include="DTOs\QuyDinhDTO.cs" />
     <Compile Include="DTOs\SachDTO.cs" />
     <Compile Include="DTOs\TheLoaiDTO.cs" />
+    <Compile Include="GUIs\ChiTietPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\ChiTietPhieuMuon.Designer.cs">
+      <DependentUpon>ChiTietPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUIs\frmDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUIs\frmDocGia.Designer.cs">
       <DependentUpon>frmDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="GUIs\frmNhanVien.cs">
       <SubType>Form</SubType>
@@ -193,6 +205,12 @@
     </Compile>
     <Compile Include="GUIs\FrmThongKe.Designer.cs">
       <DependentUpon>FrmThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\frmTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\frmTraSach.Designer.cs">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\ChiTietPhieuMuonRepository.cs" />
     <Compile Include="Repositories\DbConnection.cs" />
@@ -229,6 +247,9 @@
     <Compile Include="Services\TheLoaiService.cs" />
     <Compile Include="Configs\Session.cs" />
     <Compile Include="Services\ThongKeService.cs" />
+    <EmbeddedResource Include="GUIs\ChiTietPhieuMuon.resx">
+      <DependentUpon>ChiTietPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\frmDocGia.resx">
       <DependentUpon>frmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
@@ -252,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\frmTheLoai.resx">
       <DependentUpon>frmTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\frmTraSach.resx">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

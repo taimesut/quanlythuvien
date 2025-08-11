@@ -1,4 +1,5 @@
-﻿using QuanLyThuVien.GUIs;
+﻿using QuanLyThuVien;
+using QuanLyThuVien.GUIs;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -20,13 +21,19 @@ namespace LibraryDashboard
 
         private void AddListItemMenuSiderbar()
         {
+            if (Session.NhanVien.ChucVu == "Admin")
+            {
+                AddSidebarButton("Nhân viên");
+                AddSidebarButton("Quy định");
+                AddSidebarButton("Thống kê");
+            }
+
             AddSidebarButton("Thể loại");
             AddSidebarButton("Sách");
-            AddSidebarButton("Quy định");
             AddSidebarButton("Độc giả");
-            AddSidebarButton("Nhân viên");
-            AddSidebarButton("Phiếu mượn");
-            AddSidebarButton("Thống kê");
+            AddSidebarButton("Tạo Phiếu mượn");
+            AddSidebarButton("Xem Phiếu mượn");
+            AddSidebarButton("Đổi mật khẩu");
             AddSidebarButton("Đăng xuất");
         }
 
@@ -94,8 +101,14 @@ namespace LibraryDashboard
                 case "Nhân viên":
                     LoadFormToMainPanel(new frmNhanVien());
                     break;
-                case "Phiếu mượn":
+                case "Tạo Phiếu mượn":
                     LoadFormToMainPanel(new frmPhieuMuon());
+                    break;
+                case "Xem Phiếu mượn":
+                    LoadFormToMainPanel(new frmTraSach());
+                    break;
+                case "Đổi mật khẩu":
+                    LoadFormToMainPanel(new frmDoiMatKhau());
                     break;
                 case "Thống kê":
                     LoadFormToMainPanel(new FrmThongKe());

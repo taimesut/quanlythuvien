@@ -26,6 +26,8 @@ namespace QuanLyThuVien.GUIs
         {
             cboGioiTinh.Items.Add("Nam");
             cboGioiTinh.Items.Add("Nữ");
+            cboChucVu.Items.Add("Nhân viên");
+            cboChucVu.Items.Add("Admin");
 
 
             loadNhanVien();
@@ -48,7 +50,10 @@ namespace QuanLyThuVien.GUIs
 
                 txtMaNhanVien.Text = row.Cells["MaNhanVien"].Value.ToString();
                 txtHoTen.Text = row.Cells["HoVaTen"].Value.ToString();
-                txtChucVu.Text = row.Cells["ChucVu"].Value.ToString();
+
+                string cv = row.Cells["ChucVu"].Value?.ToString();
+                cboGioiTinh.SelectedItem = cv;
+
                 txtTenTaiKhoan.Text = row.Cells["TenTaiKhoan"].Value.ToString();
                 txtMatKhau.Text = row.Cells["MatKhau"].Value.ToString();
                 datePicker.Text = row.Cells["NgaySinh"].Value.ToString();
@@ -68,8 +73,8 @@ namespace QuanLyThuVien.GUIs
             txtHoTen.Text = "";
             txtDiaChi.Text = "";
             cboGioiTinh.SelectedIndex = -1;
+            cboChucVu.SelectedIndex = -1;
             txtSoDienThoai.Text = "";
-            txtChucVu.Text = "";
             datePicker.Text = "";
         }
 
@@ -86,7 +91,7 @@ namespace QuanLyThuVien.GUIs
                     DiaChi = txtDiaChi.Text.Trim(),
                     GioiTinh = cboGioiTinh.SelectedItem?.ToString(),
                     SoDienThoai = txtSoDienThoai.Text.Trim(),
-                    ChucVu = txtChucVu.Text.Trim(),
+                    ChucVu = cboChucVu.SelectedItem?.ToString(),
                     NgaySinh = DateTime.Parse(datePicker.Text.Trim())
                 };
 
@@ -127,7 +132,7 @@ namespace QuanLyThuVien.GUIs
                     DiaChi = txtDiaChi.Text.Trim(),
                     GioiTinh = cboGioiTinh.SelectedItem?.ToString(),
                     SoDienThoai = txtSoDienThoai.Text.Trim(),
-                    ChucVu = txtChucVu.Text.Trim(),
+                    ChucVu = cboChucVu.SelectedItem?.ToString(),
                     NgaySinh = DateTime.Parse(datePicker.Text.Trim())
                 };
 
@@ -191,7 +196,8 @@ namespace QuanLyThuVien.GUIs
                 d.DiaChi.ToLower().Contains(keyword) ||
                 d.TenTaiKhoan.ToLower().Contains(keyword) ||
                 d.GioiTinh.Contains(keyword) ||
-                d.SoDienThoai.Contains(keyword)
+                d.SoDienThoai.Contains(keyword) ||
+                d.ChucVu.Contains(keyword)
             ).ToList();
 
             dgvNhanVien.DataSource = null;

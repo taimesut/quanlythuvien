@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelInput = new System.Windows.Forms.Panel();
+            this.cboChucVu = new System.Windows.Forms.ComboBox();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lbTenTaiKhoan = new System.Windows.Forms.Label();
@@ -39,7 +41,6 @@
             this.lbMaNhanVien = new System.Windows.Forms.Label();
             this.lbChucVu = new System.Windows.Forms.Label();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
-            this.txtChucVu = new System.Windows.Forms.TextBox();
             this.cboGioiTinh = new System.Windows.Forms.ComboBox();
             this.lbSdt = new System.Windows.Forms.Label();
             this.txtSoDienThoai = new System.Windows.Forms.TextBox();
@@ -48,20 +49,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbTenNhanVien = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.datePicker = new System.Windows.Forms.DateTimePicker();
+            this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelInput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelInput
             // 
+            this.panelInput.Controls.Add(this.cboChucVu);
             this.panelInput.Controls.Add(this.datePicker);
             this.panelInput.Controls.Add(this.label7);
             this.panelInput.Controls.Add(this.txtTimKiem);
@@ -73,7 +78,6 @@
             this.panelInput.Controls.Add(this.lbMaNhanVien);
             this.panelInput.Controls.Add(this.lbChucVu);
             this.panelInput.Controls.Add(this.txtMaNhanVien);
-            this.panelInput.Controls.Add(this.txtChucVu);
             this.panelInput.Controls.Add(this.cboGioiTinh);
             this.panelInput.Controls.Add(this.lbSdt);
             this.panelInput.Controls.Add(this.txtSoDienThoai);
@@ -82,10 +86,27 @@
             this.panelInput.Controls.Add(this.label2);
             this.panelInput.Controls.Add(this.lbTenNhanVien);
             this.panelInput.Controls.Add(this.txtHoTen);
-            this.panelInput.Location = new System.Drawing.Point(0, 1);
+            this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelInput.Location = new System.Drawing.Point(3, 3);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(609, 202);
+            this.panelInput.Size = new System.Drawing.Size(667, 311);
             this.panelInput.TabIndex = 0;
+            // 
+            // cboChucVu
+            // 
+            this.cboChucVu.FormattingEnabled = true;
+            this.cboChucVu.Location = new System.Drawing.Point(412, 48);
+            this.cboChucVu.Name = "cboChucVu";
+            this.cboChucVu.Size = new System.Drawing.Size(182, 21);
+            this.cboChucVu.TabIndex = 35;
+            // 
+            // datePicker
+            // 
+            this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datePicker.Location = new System.Drawing.Point(412, 17);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(182, 20);
+            this.datePicker.TabIndex = 4;
             // 
             // label7
             // 
@@ -171,13 +192,6 @@
             this.txtMaNhanVien.Size = new System.Drawing.Size(182, 20);
             this.txtMaNhanVien.TabIndex = 24;
             // 
-            // txtChucVu
-            // 
-            this.txtChucVu.Location = new System.Drawing.Point(412, 46);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Size = new System.Drawing.Size(182, 20);
-            this.txtChucVu.TabIndex = 26;
-            // 
             // cboGioiTinh
             // 
             this.cboGioiTinh.FormattingEnabled = true;
@@ -243,25 +257,27 @@
             this.txtHoTen.Size = new System.Drawing.Size(182, 20);
             this.txtHoTen.TabIndex = 16;
             // 
-            // dgvNhanVien
-            // 
-            this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhanVien.Location = new System.Drawing.Point(3, 198);
-            this.dgvNhanVien.Name = "dgvNhanVien";
-            this.dgvNhanVien.Size = new System.Drawing.Size(933, 310);
-            this.dgvNhanVien.TabIndex = 2;
-            this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgNhanVien_cellClick);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnLamMoi);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnCapNhat);
             this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Location = new System.Drawing.Point(600, 1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(676, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 197);
+            this.panel1.Size = new System.Drawing.Size(466, 311);
             this.panel1.TabIndex = 3;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(168, 88);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(75, 30);
+            this.btnLamMoi.TabIndex = 10;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnThem
             // 
@@ -293,38 +309,63 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnLamMoi
+            // dgvNhanVien
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(168, 88);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(75, 30);
-            this.btnLamMoi.TabIndex = 10;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            this.dgvNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNhanVien.Location = new System.Drawing.Point(3, 326);
+            this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.ReadOnly = true;
+            this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNhanVien.Size = new System.Drawing.Size(1145, 317);
+            this.dgvNhanVien.TabIndex = 2;
+            this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgNhanVien_cellClick);
             // 
-            // datePicker
+            // tableLayoutPanel1
             // 
-            this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePicker.Location = new System.Drawing.Point(412, 17);
-            this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(182, 20);
-            this.datePicker.TabIndex = 4;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dgvNhanVien, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1151, 646);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.77729F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.22271F));
+            this.tableLayoutPanel2.Controls.Add(this.panelInput, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1145, 317);
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 509);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvNhanVien);
-            this.Controls.Add(this.panelInput);
+            this.ClientSize = new System.Drawing.Size(1151, 646);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -332,7 +373,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelInput;
-        private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.ComboBox cboGioiTinh;
         private System.Windows.Forms.Label lbSdt;
         private System.Windows.Forms.TextBox txtSoDienThoai;
@@ -349,7 +389,6 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label lbNgaySinh;
         private System.Windows.Forms.Label lbChucVu;
-        private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnCapNhat;
@@ -358,5 +397,9 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.DateTimePicker datePicker;
+        private System.Windows.Forms.ComboBox cboChucVu;
+        private System.Windows.Forms.DataGridView dgvNhanVien;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

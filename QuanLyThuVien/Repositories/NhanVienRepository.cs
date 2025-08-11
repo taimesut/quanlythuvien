@@ -22,7 +22,7 @@ namespace QuanLyThuVien.Repositories
             {
                 conn.Open();
                 string sql = @"SELECT MaNhanVien, TenTaiKhoan, MatKhau, HoVaTen, DiaChi, GioiTinh, SoDienThoai, ChucVu, NgaySinh
-                               FROM NhanVien WHERE ChucVu='Nhân viên'";
+                               FROM NhanVien";
                 using (var cmd = new MySqlCommand(sql, conn))
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -42,7 +42,6 @@ namespace QuanLyThuVien.Repositories
                     }
                 }
             }
-
             return list;
         }
 
@@ -131,6 +130,24 @@ namespace QuanLyThuVien.Repositories
                     cmd.Parameters.AddWithValue("@chucVu", nv.ChucVu);
                     cmd.Parameters.AddWithValue("@ngaySinh", nv.NgaySinh);
                     cmd.Parameters.AddWithValue("@id", nv.MaNhanVien);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public bool UpdateMatKhau(int id, string newPass)
+        {
+            using (var conn = _db.GetConnection())
+            {
+                conn.Open();
+                string sql = @"UPDATE NhanVien
+                               SET MatKhau = @mk
+                               WHERE MaNhanVien = @id";
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@mk", newPass);
+                    cmd.Parameters.AddWithValue("@id", id);
 
                     return cmd.ExecuteNonQuery() > 0;
                 }

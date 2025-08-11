@@ -25,7 +25,7 @@ namespace QuanLyThuVien.Repositories
             {
                 conn.Open();
                 string sql = @"SELECT MaSach, MaPhieuMuon, SoLuong
-                               FROM ChiTietPhieuMuon";
+                               FROM ChiTietMuonSach";
                 using (var cmd = new MySqlCommand(sql, conn))
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -51,7 +51,7 @@ namespace QuanLyThuVien.Repositories
             {
                 conn.Open();
                 string sql = @"SELECT MaSach, MaPhieuMuon, SoLuong
-                               FROM ChiTietPhieuMuon
+                               FROM ChiTietMuonSach
                                WHERE MaPhieuMuon = @maPM";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
@@ -69,9 +69,10 @@ namespace QuanLyThuVien.Repositories
                     }
                 }
             }
-
             return list;
         }
+
+
 
         public bool Add(ChiTietPhieuMuonDTO ct)
         {
@@ -96,7 +97,7 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = @"UPDATE ChiTietPhieuMuon
+                string sql = @"UPDATE ChiTietMuonSach
                                SET SoLuong = @soLuong
                                WHERE MaSach = @maSach AND MaPhieuMuon = @maPM";
                 using (var cmd = new MySqlCommand(sql, conn))
@@ -115,7 +116,7 @@ namespace QuanLyThuVien.Repositories
             using (var conn = _db.GetConnection())
             {
                 conn.Open();
-                string sql = @"DELETE FROM ChiTietPhieuMuon
+                string sql = @"DELETE FROM ChiTietMuonSach
                                WHERE MaSach = @maSach AND MaPhieuMuon = @maPM";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {

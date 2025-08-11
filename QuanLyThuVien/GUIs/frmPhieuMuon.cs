@@ -25,16 +25,15 @@ namespace QuanLyThuVien.GUIs
         PhieuMuonRepository phieuMuonRepository = new PhieuMuonRepository();
         ChiTietPhieuMuonRepository chiTietPhieuMuonRepository = new ChiTietPhieuMuonRepository();
 
+        QuyDinhRepository QuyDinhRepository = new QuyDinhRepository();
+
         public frmPhieuMuon()
         {
             InitializeComponent();
 
         }
 
-        private void dgvChiTiet()
-        {
 
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -62,6 +61,10 @@ namespace QuanLyThuVien.GUIs
 
         private void loadThongTinDocGia()
         {
+            if (txtNhapMaDocGia.Text.Length == 0)
+            {
+                return;
+            }
             DocGiaDTO docGia = docGiaService.LayDocGiaTheoId(int.Parse(txtNhapMaDocGia.Text));
             docGiaCB = docGia;
             if (docGia != null)
@@ -133,26 +136,52 @@ namespace QuanLyThuVien.GUIs
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // lưu phiếu
-            int? maphieu = phieuMuonRepository.AddAndGetId(new PhieuMuonDTO(0, Session.NhanVien.MaNhanVien, docGiaCB.MaDocGia, DateTime.Now
-                , DateTime.Now.AddDays(1), 1));
+            if (txtNhapMaDocGia.Text.Length > 0) {
+                int? maphieu = phieuMuonRepository.AddAndGetId(new PhieuMuonDTO(0, Session.NhanVien.MaNhanVien, docGiaCB.MaDocGia, DateTime.Now
+                    ,DateTime.Now.AddDays(QuyDinhRepository.GetById(1).SoNgayMuonToiDa), 1));
 
-            if (maphieu.HasValue)
-            {
-                foreach (var item in listchitietmuon)
+                if (maphieu.HasValue)
                 {
-                    item.MaPhieuMuon = maphieu.Value;
-                    chiTietPhieuMuonRepository.Add(item);
+                    foreach (var item in listchitietmuon)
+                    {
+                        item.MaPhieuMuon = maphieu.Value;
+                        chiTietPhieuMuonRepository.Add(item);
+                    }
                 }
+                MessageBox.Show("Lưu phiếu mượn thành công!");
             }
-
-            MessageBox.Show("Lưu phiếu mượn thành công!");
-            // Xóa dữ liệu form để tạo phiếu mới nếu muốn
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             loadThongTinDocGia();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (dgvChiTietPhieuMuon.CurrentRow != null)
+            {
+                int maSach = Convert.ToInt32(dgvChiTietPhieuMuon.CurrentRow.Cells["MaSach"].Value);
+
+                var itemToRemove = listchitietmuon.FirstOrDefault(x => x.MaSach == maSach);
+                if (itemToRemove != null)
+                {
+                    listchitietmuon.Remove(itemToRemove);
+                }
+
+                var listSach = sachService.GetAll();
+                var listnew = from s in listchitietmuon
+                              join ls in listSach on s.MaSach equals ls.MaSach
+                              select new
+                              {
+                                  s.MaSach,
+                                  ls.TenSach,
+                                  s.SoLuong,
+                              };
+
+                dgvChiTietPhieuMuon.DataSource = null;
+                dgvChiTietPhieuMuon.DataSource = listnew.ToList();
+            }
         }
     }
 }

@@ -162,6 +162,24 @@ namespace QuanLyThuVien.Repositories
             }
         }
 
+        public bool UpdateStatus(int id, int status)
+        {
+            using (var conn = _db.GetConnection())
+            {
+                conn.Open();
+                string sql = @"UPDATE PhieuMuon 
+                               SET TrangThai = @trangThai
+                               WHERE MaPhieuMuon = @id";
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@trangThai", status);
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
         public bool Delete(string id)
         {
             using (var conn = _db.GetConnection())

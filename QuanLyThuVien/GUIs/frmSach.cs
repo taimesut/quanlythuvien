@@ -44,8 +44,24 @@ namespace QuanLyThuVien.GUIs
 
         private void LoadSach()
         {
+            var dsTheLoai = theLoaiService.GetAll();
             var listSach = sachService.GetAll();
-            dgvSach.DataSource = listSach;
+
+            var listSachWithTenTheLoai = from sach in listSach
+                                         join theLoai in dsTheLoai on sach.MaTheLoai equals theLoai.MaTheLoai
+                                         select new
+                                         {
+                                             sach.MaSach,
+                                             sach.TenSach,
+                                             TenTheLoai = theLoai.TenTheLoai,
+                                             sach.TacGia,
+                                             sach.NhaXuatBan,
+                                             sach.NamXuatBan,
+                                             sach.SoLuong,
+                                             sach.Anh
+                                         };
+
+            dgvSach.DataSource = listSachWithTenTheLoai.ToList();
         }
 
         private void btnChonAnh_Click(object sender, EventArgs e)
@@ -72,7 +88,7 @@ namespace QuanLyThuVien.GUIs
                     txtTenSach.Text.Trim(),
                     int.Parse(txtNamXuatBan.Text.Trim()),
                     int.Parse(txtSoLuong.Text.Trim()),
-                    cloudinaryHelper.UploadImage(imagePath) // truyền đường dẫn ảnh
+                    cloudinaryHelper.UploadImage(imagePath)
                 );
 
                 sachService.Add(sach);
@@ -149,14 +165,14 @@ namespace QuanLyThuVien.GUIs
                 DataGridViewRow row = dgvSach.Rows[e.RowIndex];
                 txtMaSach.Text = row.Cells["MaSach"].Value.ToString();
                 txtTenSach.Text = row.Cells["TenSach"].Value.ToString();
-                cboTheLoai.SelectedValue = row.Cells["MaTheLoai"].Value;
+                cboTheLoai.Text = row.Cells["TenTheLoai"].Value.ToString();
                 txtTacGia.Text = row.Cells["TacGia"].Value.ToString();
                 txtNhaXuatBan.Text = row.Cells["NhaXuatBan"].Value.ToString();
                 txtNamXuatBan.Text = row.Cells["NamXuatBan"].Value.ToString();
                 txtSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
 
                 string anh = row.Cells["Anh"].Value?.ToString() ?? "";
-                imagePath = anh; // cập nhật biến đường dẫn
+                imagePath = anh;
 
                 if (!string.IsNullOrEmpty(anh))
                 {
@@ -185,21 +201,6 @@ namespace QuanLyThuVien.GUIs
 
             dgvSach.DataSource = ketQua;
         }
-
-        private void ClearForm()
-        {
-            txtMaSach.Text = "";
-            txtTenSach.Text = "";
-            cboTheLoai.SelectedIndex = -1;
-            txtTacGia.Text = "";
-            txtNhaXuatBan.Text = "";
-            txtNamXuatBan.Text = "";
-            txtSoLuong.Text = "";
-            imagePath = "";
-            picBoxAnh.Image = null;
-            txtTimKiem.Text = "";
-        }
-
 
         private void btnChoose_Click(object sender, EventArgs e)
         {
