@@ -27,7 +27,6 @@ namespace LibraryDashboard
                 AddSidebarButton("Quy định");
                 AddSidebarButton("Thống kê");
             }
-
             AddSidebarButton("Thể loại");
             AddSidebarButton("Sách");
             AddSidebarButton("Độc giả");
