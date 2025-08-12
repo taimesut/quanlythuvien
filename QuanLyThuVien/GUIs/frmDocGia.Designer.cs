@@ -61,7 +61,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(361, 49);
+            this.label7.Location = new System.Drawing.Point(18, 100);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 16;
@@ -71,9 +71,9 @@
             // 
             this.panelDataGridView.Controls.Add(this.dgvDocGia);
             this.panelDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDataGridView.Location = new System.Drawing.Point(3, 218);
+            this.panelDataGridView.Location = new System.Drawing.Point(3, 216);
             this.panelDataGridView.Name = "panelDataGridView";
-            this.panelDataGridView.Size = new System.Drawing.Size(1068, 396);
+            this.panelDataGridView.Size = new System.Drawing.Size(978, 392);
             this.panelDataGridView.TabIndex = 2;
             // 
             // dgvDocGia
@@ -87,7 +87,7 @@
             this.dgvDocGia.Name = "dgvDocGia";
             this.dgvDocGia.ReadOnly = true;
             this.dgvDocGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDocGia.Size = new System.Drawing.Size(1068, 396);
+            this.dgvDocGia.Size = new System.Drawing.Size(978, 392);
             this.dgvDocGia.TabIndex = 0;
             this.dgvDocGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSach_CellClick);
             // 
@@ -113,7 +113,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(442, 46);
+            this.txtTimKiem.Location = new System.Drawing.Point(99, 97);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(182, 20);
             this.txtTimKiem.TabIndex = 15;
@@ -164,13 +164,15 @@
             // 
             // panelButton
             // 
+            this.panelButton.Controls.Add(this.label7);
             this.panelButton.Controls.Add(this.btnThem);
+            this.panelButton.Controls.Add(this.txtTimKiem);
             this.panelButton.Controls.Add(this.btnCapNhat);
             this.panelButton.Controls.Add(this.btnXoa);
             this.panelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelButton.Location = new System.Drawing.Point(697, 3);
+            this.panelButton.Location = new System.Drawing.Point(457, 3);
             this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(368, 203);
+            this.panelButton.Size = new System.Drawing.Size(518, 201);
             this.panelButton.TabIndex = 1;
             // 
             // txtDiaChi
@@ -217,8 +219,6 @@
             // 
             // panelInput
             // 
-            this.panelInput.Controls.Add(this.label7);
-            this.panelInput.Controls.Add(this.txtTimKiem);
             this.panelInput.Controls.Add(this.cboGioiTinh);
             this.panelInput.Controls.Add(this.label4);
             this.panelInput.Controls.Add(this.txtSoDienThoai);
@@ -232,7 +232,7 @@
             this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInput.Location = new System.Drawing.Point(3, 3);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(688, 203);
+            this.panelInput.Size = new System.Drawing.Size(448, 201);
             this.panelInput.TabIndex = 0;
             // 
             // txtHoTen
@@ -245,8 +245,8 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.42127F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.57873F));
             this.tableLayoutPanel2.Controls.Add(this.panelInput, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.panelButton, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -254,7 +254,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1068, 209);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(978, 207);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -269,20 +269,21 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1074, 617);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 611);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // frmDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 617);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmDocGia";
             this.Text = "frmDocGia";
             this.panelDataGridView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).EndInit();
             this.panelButton.ResumeLayout(false);
+            this.panelButton.PerformLayout();
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

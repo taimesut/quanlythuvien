@@ -76,7 +76,7 @@
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.ReadOnly = true;
             this.dgvSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSach.Size = new System.Drawing.Size(1007, 396);
+            this.dgvSach.Size = new System.Drawing.Size(978, 392);
             this.dgvSach.TabIndex = 0;
             this.dgvSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSach_CellClick);
             // 
@@ -92,7 +92,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1013, 618);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 611);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -107,7 +107,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1007, 210);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(978, 207);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panelInput
@@ -133,7 +133,7 @@
             this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInput.Location = new System.Drawing.Point(3, 3);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(648, 204);
+            this.panelInput.Size = new System.Drawing.Size(629, 201);
             this.panelInput.TabIndex = 0;
             // 
             // label8
@@ -292,9 +292,9 @@
             this.panelButton.Controls.Add(this.btnCapNhat);
             this.panelButton.Controls.Add(this.btnXoa);
             this.panelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelButton.Location = new System.Drawing.Point(657, 3);
+            this.panelButton.Location = new System.Drawing.Point(638, 3);
             this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(347, 204);
+            this.panelButton.Size = new System.Drawing.Size(337, 201);
             this.panelButton.TabIndex = 1;
             // 
             // btnChoose
@@ -341,16 +341,16 @@
             // 
             this.panelDataGridView.Controls.Add(this.dgvSach);
             this.panelDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDataGridView.Location = new System.Drawing.Point(3, 219);
+            this.panelDataGridView.Location = new System.Drawing.Point(3, 216);
             this.panelDataGridView.Name = "panelDataGridView";
-            this.panelDataGridView.Size = new System.Drawing.Size(1007, 396);
+            this.panelDataGridView.Size = new System.Drawing.Size(978, 392);
             this.panelDataGridView.TabIndex = 2;
             // 
             // frmSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 618);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmSach";
             this.Text = "frmSach";

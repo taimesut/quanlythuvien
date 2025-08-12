@@ -39,7 +39,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(700, 70);
+            this.panelTop.Size = new System.Drawing.Size(984, 70);
             this.panelTop.TabIndex = 0;
             // 
             // labelTitle
@@ -49,7 +49,7 @@
             this.labelTitle.ForeColor = System.Drawing.Color.White;
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(700, 70);
+            this.labelTitle.Size = new System.Drawing.Size(984, 70);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Đăng Nhập Hệ Thống";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 280);
+            this.panel1.Size = new System.Drawing.Size(984, 541);
             this.panel1.TabIndex = 7;
             // 
             // panel2
@@ -71,7 +71,7 @@
             this.panel2.Controls.Add(this.txtTenTaiKhoan);
             this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Controls.Add(this.btnThoat);
-            this.panel2.Location = new System.Drawing.Point(12, 6);
+            this.panel2.Location = new System.Drawing.Point(112, 122);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(676, 262);
             this.panel2.TabIndex = 0;
@@ -116,7 +116,7 @@
             // 
             // txtTenTaiKhoan
             // 
-            this.txtTenTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtTenTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtTenTaiKhoan.Location = new System.Drawing.Point(212, 43);
@@ -126,7 +126,7 @@
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtMatKhau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtMatKhau.Location = new System.Drawing.Point(212, 103);
@@ -156,10 +156,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(700, 350);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTop);
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập Hệ Thống";

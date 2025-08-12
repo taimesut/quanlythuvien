@@ -44,10 +44,14 @@
             this.ClientSize = new System.Drawing.Size(1184, 652);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelSidebar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmDashBoard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.FrmDashBoard_Load);
             this.ResumeLayout(false);
+
         }
     }
 }

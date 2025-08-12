@@ -39,9 +39,9 @@
             this.lblTenTheLoai = new System.Windows.Forms.Label();
             this.txtMaDocGia = new System.Windows.Forms.TextBox();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panelDataGridView = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -61,7 +61,7 @@
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(794, 287);
+            this.dgv.Size = new System.Drawing.Size(978, 392);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
@@ -77,7 +77,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 611);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -92,7 +92,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 151);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(978, 207);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panelInput
@@ -106,7 +106,7 @@
             this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInput.Location = new System.Drawing.Point(3, 3);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(510, 145);
+            this.panelInput.Size = new System.Drawing.Size(629, 201);
             this.panelInput.TabIndex = 0;
             // 
             // label7
@@ -165,10 +165,20 @@
             this.panelButton.Controls.Add(this.button1);
             this.panelButton.Controls.Add(this.btnThem);
             this.panelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelButton.Location = new System.Drawing.Point(519, 3);
+            this.panelButton.Location = new System.Drawing.Point(638, 3);
             this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(272, 145);
+            this.panelButton.Size = new System.Drawing.Size(337, 201);
             this.panelButton.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Xem chi tiết";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnThem
             // 
@@ -184,26 +194,16 @@
             // 
             this.panelDataGridView.Controls.Add(this.dgv);
             this.panelDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDataGridView.Location = new System.Drawing.Point(3, 160);
+            this.panelDataGridView.Location = new System.Drawing.Point(3, 216);
             this.panelDataGridView.Name = "panelDataGridView";
-            this.panelDataGridView.Size = new System.Drawing.Size(794, 287);
+            this.panelDataGridView.Size = new System.Drawing.Size(978, 392);
             this.panelDataGridView.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(15, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Xem chi tiết";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmTraSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmTraSach";
             this.Text = "frmTraSach";

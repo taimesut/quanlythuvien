@@ -243,7 +243,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(683, 80);
+            this.groupBox1.Location = new System.Drawing.Point(650, 80);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(322, 200);
             this.groupBox1.TabIndex = 25;
@@ -263,7 +263,7 @@
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(100, 31);
             this.btnTimKiem.TabIndex = 27;
-            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Text = "Load độc giả";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -279,7 +279,7 @@
             // 
             // frmPhieuMuon
             // 
-            this.ClientSize = new System.Drawing.Size(1052, 560);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtNhapMaDocGia);

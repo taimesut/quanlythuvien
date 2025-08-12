@@ -120,3 +120,5 @@ C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.frmTraSach.resources
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.ChiTietPhieuMuon.resources
 C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.frmDoiMatKhau.resources
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.FrmThongKe.resources
+C:\Users\Windows\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUIs.frmThongTinDangNhap.resources

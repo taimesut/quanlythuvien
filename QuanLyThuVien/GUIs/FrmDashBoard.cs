@@ -87,31 +87,43 @@ namespace LibraryDashboard
             switch (menu)
             {
                 case "Thể loại":
+                    this.Text = "Quản lý Thể loại";
                     LoadFormToMainPanel(new frmTheLoai());
                     break;
                 case "Sách":
+                    this.Text = "Quản lý Sách";
                     LoadFormToMainPanel(new frmSach());
                     break;
                 case "Quy định":
+                    this.Text = "Quy định";
                     LoadFormToMainPanel(new frmQuyDinh());
                     break;
                 case "Độc giả":
+                    this.Text = "Quản lý Độc giả";
                     LoadFormToMainPanel(new frmDocGia());
                     break;
                 case "Nhân viên":
+                    this.Text = "Quản lý Nhân viên";
                     LoadFormToMainPanel(new frmNhanVien());
                     break;
                 case "Tạo Phiếu mượn":
+                    this.Text = "Tạo Phiếu mượn";
                     LoadFormToMainPanel(new frmPhieuMuon());
                     break;
                 case "Xem Phiếu mượn":
+                    this.Text = "Phiếu mượn";
                     LoadFormToMainPanel(new frmTraSach());
                     break;
                 case "Đổi mật khẩu":
+                    this.Text = "Đổi mật khẩu";
                     LoadFormToMainPanel(new frmDoiMatKhau());
                     break;
                 case "Thống kê":
+                    this.Text = "Thống kê";
                     LoadFormToMainPanel(new FrmThongKe());
+                    break;
+                default:
+                    this.Text = "Dashbroad";
                     break;
             }
         }

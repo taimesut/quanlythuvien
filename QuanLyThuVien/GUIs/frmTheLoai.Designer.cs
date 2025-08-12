@@ -15,6 +15,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelInput = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lblMaTheLoai = new System.Windows.Forms.Label();
             this.txtMaTheLoai = new System.Windows.Forms.TextBox();
             this.lblTenTheLoai = new System.Windows.Forms.Label();
@@ -25,8 +27,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.panelDataGridView = new System.Windows.Forms.Panel();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelInput.SuspendLayout();
@@ -47,7 +47,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 427);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 611);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -62,7 +62,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(856, 143);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(978, 207);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panelInput
@@ -76,8 +76,25 @@
             this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInput.Location = new System.Drawing.Point(3, 3);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(550, 137);
+            this.panelInput.Size = new System.Drawing.Size(629, 201);
             this.panelInput.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Tìm kiếm";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(90, 98);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(200, 20);
+            this.txtTimKiem.TabIndex = 17;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // lblMaTheLoai
             // 
@@ -118,9 +135,9 @@
             this.panelButton.Controls.Add(this.btnCapNhat);
             this.panelButton.Controls.Add(this.btnXoa);
             this.panelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelButton.Location = new System.Drawing.Point(559, 3);
+            this.panelButton.Location = new System.Drawing.Point(638, 3);
             this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(294, 137);
+            this.panelButton.Size = new System.Drawing.Size(337, 201);
             this.panelButton.TabIndex = 1;
             // 
             // btnThem
@@ -157,9 +174,9 @@
             // 
             this.panelDataGridView.Controls.Add(this.dgv);
             this.panelDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDataGridView.Location = new System.Drawing.Point(3, 152);
+            this.panelDataGridView.Location = new System.Drawing.Point(3, 216);
             this.panelDataGridView.Name = "panelDataGridView";
-            this.panelDataGridView.Size = new System.Drawing.Size(856, 272);
+            this.panelDataGridView.Size = new System.Drawing.Size(978, 392);
             this.panelDataGridView.TabIndex = 2;
             // 
             // dgv
@@ -173,30 +190,13 @@
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(856, 272);
+            this.dgv.Size = new System.Drawing.Size(978, 392);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Tìm kiếm";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(90, 98);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(182, 20);
-            this.txtTimKiem.TabIndex = 17;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
             // frmTheLoai
             // 
-            this.ClientSize = new System.Drawing.Size(862, 427);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmTheLoai";
             this.Text = "Quản lý Thể Loại";

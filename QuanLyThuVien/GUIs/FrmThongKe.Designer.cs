@@ -28,32 +28,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartPie)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Text = "Bảng Thống Kê Thư Viện";
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(16, 12);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Text = "Làm mới";
-            this.btnRefresh.Location = new System.Drawing.Point(760, 12);
-            this.btnRefresh.Size = new System.Drawing.Size(80, 28);
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // dgvSummary
             // 
-            this.dgvSummary.Location = new System.Drawing.Point(16, 50);
-            this.dgvSummary.Size = new System.Drawing.Size(420, 380);
-            this.dgvSummary.ReadOnly = true;
             this.dgvSummary.AllowUserToAddRows = false;
             this.dgvSummary.AllowUserToDeleteRows = false;
             this.dgvSummary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSummary.Location = new System.Drawing.Point(16, 50);
+            this.dgvSummary.Name = "dgvSummary";
+            this.dgvSummary.ReadOnly = true;
+            this.dgvSummary.Size = new System.Drawing.Size(420, 380);
+            this.dgvSummary.TabIndex = 2;
             // 
             // chartColumn
             // 
             this.chartColumn.Location = new System.Drawing.Point(452, 50);
+            this.chartColumn.Name = "chartColumn";
             this.chartColumn.Size = new System.Drawing.Size(440, 200);
             this.chartColumn.TabIndex = 1;
             this.chartColumn.Text = "chartColumn";
@@ -61,13 +50,33 @@
             // chartPie
             // 
             this.chartPie.Location = new System.Drawing.Point(452, 270);
+            this.chartPie.Name = "chartPie";
             this.chartPie.Size = new System.Drawing.Size(440, 160);
             this.chartPie.TabIndex = 2;
             this.chartPie.Text = "chartPie";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(760, 12);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(80, 28);
+            this.btnRefresh.TabIndex = 1;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(16, 12);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(233, 25);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Bảng Thống Kê Thư Viện";
+            // 
             // FrmThongKe
             // 
-            this.ClientSize = new System.Drawing.Size(920, 450);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvSummary);
@@ -81,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartPie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }
